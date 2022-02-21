@@ -1,12 +1,12 @@
-import React, {ReactElement} from 'react';
-import {Avatar} from '@mui/material';
+import React, { ReactElement } from 'react';
+import { Avatar } from '@mui/material';
 import {
-    InformationOutline
+  InformationOutline,
 } from 'mdi-material-ui';
 import './Icon.css';
 
 export const ICONS = {
-    Info: InformationOutline
+  Info: InformationOutline,
 } as const;
 
 /**
@@ -16,11 +16,13 @@ export const ICONS = {
  * @returns {ReactElement}
  */
 export function Icon(props: {name: string}): ReactElement {
-    const IconType = ICONS[props.name as keyof typeof ICONS];
+  const { name } = props;
 
-    return (
-        <Avatar className={`icon-avatar-wrapper ${props.name}`}>
-            <IconType className="icon-avatar" />
-        </Avatar>
-    );
+  const IconType = ICONS[name as keyof typeof ICONS];
+
+  return (
+    <Avatar className={`icon-avatar-wrapper ${name}`}>
+      <IconType className="icon-avatar" />
+    </Avatar>
+  );
 }

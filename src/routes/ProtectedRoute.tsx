@@ -1,12 +1,13 @@
 import * as React from 'react';
-import {Route, RouteProps} from 'react-router-dom';
+import { Route, RouteProps } from 'react-router-dom';
+import { ReactElement } from 'react';
 
 export interface IProtectedRouteProps extends RouteProps {
     isAuth: boolean; // is authenticate route
 }
 
-const ProtectedRoute: React.FC<IProtectedRouteProps> = props => {
-    return props.isAuth ? <Route {...props} children={props.children} /> : null;
-};
+export default function ProtectedRoute(props: IProtectedRouteProps): ReactElement | null {
+  const { children, isAuth } = props;
 
-export default ProtectedRoute;
+  return isAuth ? <Route {...props}>{children}</Route> : null;
+}

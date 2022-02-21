@@ -1,4 +1,4 @@
-import Authenticator, {AuthState} from 'one.models/lib/models/Authenticator/Authenticator';
+import Authenticator, { AuthState } from 'one.models/lib/models/Authenticator/Authenticator';
 import React from 'react';
 
 /**
@@ -7,23 +7,25 @@ import React from 'react';
  * @param one - The one instance model
  * @returns the current authentication state
  */
-export function useAuthenticationState(one: Authenticator): AuthState | undefined {
-    const [authenticationState, setAuthenticationState] = React.useState<AuthState>();
+function useAuthenticationState(one: Authenticator): AuthState | undefined {
+  const [authenticationState, setAuthenticationState] = React.useState<AuthState>();
 
-    React.useEffect(() => {
-        function fetchCurrentAuthenticationState(): void {
-            setAuthenticationState(one.authState.currentState);
-        }
+  React.useEffect(() => {
+    function fetchCurrentAuthenticationState(): void {
+      setAuthenticationState(one.authState.currentState);
+    }
 
-        const disconnectOnAuthStateChanged = one.authState.onEnterState(
-            fetchCurrentAuthenticationState
-        );
-        fetchCurrentAuthenticationState();
+    const disconnectOnAuthStateChanged = one.authState.onEnterState(
+      fetchCurrentAuthenticationState,
+    );
+    fetchCurrentAuthenticationState();
 
-        return () => {
-            disconnectOnAuthStateChanged();
-        };
-    }, [one]);
+    return () => {
+      disconnectOnAuthStateChanged();
+    };
+  }, [one]);
 
-    return authenticationState;
+  return authenticationState;
 }
+
+export default { useAuthenticationState };

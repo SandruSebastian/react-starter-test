@@ -1,15 +1,17 @@
 import React from 'react';
 
-import {AppRouter} from '../routes/AppRouter';
 import Authenticator from 'one.models/lib/models/Authenticator/Authenticator';
-import './Ui.css'
+import AppRouter from '../routes/AppRouter';
+import './Ui.css';
 /**
  * Builds the UI component which is the main component of the application
  */
 export default function Ui(props: {one: Authenticator}) {
-    return (
-        <div className="container6">
-            <AppRouter one={props.one} />
-        </div>
-    );
+  const { one } = props;
+
+  return (
+    <div className="container6">
+      <AppRouter one={one} />
+    </div>
+  );
 }
