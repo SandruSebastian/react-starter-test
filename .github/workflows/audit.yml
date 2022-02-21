@@ -1,0 +1,46 @@
+name: Audit
+
+on:
+    schedule:
+        - cron: '0 4 * * 3'
+    push:
+        branches: [do-audit]
+
+jobs:
+    audit:
+        runs-on: ubuntu-20.04
+
+        steps:
+            # Setup env
+            - uses: actions/checkout@v2
+            - uses: webfactory/ssh-agent@v0.4.1
+              with:
+                  ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+            - name: Setup Node
+              uses: actions/setup-node@v1
+              with:
+                  node-version: 16.x
+
+            - name: Run audit only high
+              run: npm audit --no-color --level high > audit-high.txt || true
+
+            - name: Run audit
+              run: npm audit --no-color > audit-all.txt || true
+
+            - name: Send mail
+              uses: dawidd6/action-send-mail@v2
+              with:
+                  server_address: smtp.mailbox.org
+                  server_port: 465
+                  username: ${{secrets.REPORT_MAIL_USERNAME}}
+                  password: ${{secrets.REPORT_MAIL_PASSWORD}}
+                  subject: Audit-Report for ${{github.repository}}
+                  # Read file contents as body:
+                  body: file://audit-high.txt
+                  to: devops@refinio.net,erik@refinio.net,winpuc@refinio.net,milena@refinio.net,sebastian@refinio.net
+                  from: devops@refinio.net # <user@example.com>
+                  # Optional content type (defaults to text/plain):
+                  content_type: text
+                  # Optional attachments:
+                  attachments: audit-all.txt

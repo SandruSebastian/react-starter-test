@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
+<svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" version="1.1" viewBox="0 0 200 200" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+    <g transform="matrix(.8547 0 0 .80645 34.032 34.438)">
+        <rect x="-39.818" y="-42.703" width="234" height="248" fill="none"/>
+        <g transform="matrix(11.751 0 0 12.391 -1820.6 -4265)">
+
+                <g transform="matrix(-.3179 -1.0372 -1.0372 .3179 156.8 344.93)">
+                    <path d="m-7.066-9.555c-4.081 0-7.389 3.308-7.388 7.389-1e-3 4.082 3.308 7.39 7.388 7.39 4.082 0 7.39-3.308 7.39-7.39 0-4.081-3.308-7.389-7.39-7.389" fill="url(#a)" fill-rule="nonzero"/>
+                </g>
+            <g transform="matrix(-.29304 -.9561 -.9561 .29304 157.39 344.56)">
+                    <path d="m-7.066-9.555c-4.081 0-7.389 3.308-7.388 7.389-1e-3 4.082 3.308 7.39 7.388 7.39 4.082 0 7.39-3.308 7.39-7.39 0-4.081-3.308-7.389-7.39-7.389" fill="#489cc1" fill-rule="nonzero"/>
+                </g>
+            <g transform="matrix(-.29304 -.9561 -.9561 .29304 162.92 347.39)">
+                    <path d="m-2.739-3.704c-2.636 1e-3 -4.771 1.283-4.771 2.865s2.136 2.865 4.771 2.865 4.771-1.283 4.771-2.865-2.136-2.865-4.771-2.865" fill="#fff" fill-rule="nonzero"/>
+                </g>
+
+        </g>
+    </g>
+    <defs>
+        <radialGradient id="a" cx="0" cy="0" r="1" gradientTransform="matrix(7.3894 0 0 7.3899 -7.065 -2.1655)" gradientUnits="userSpaceOnUse"><stop offset="0"/><stop stop-opacity="0" offset="1"/></radialGradient>
+    </defs>
+</svg>

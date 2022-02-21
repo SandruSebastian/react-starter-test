@@ -1,0 +1,20 @@
+.icon-avatar-wrapper {
+    margin: 1.5%;
+}
+
+.icon-avatar.MuiSvgIcon-root {
+    width: 30px;
+    height: 30px;
+}
+
+@media (max-width: 767px) {
+    .icon-avatar-wrapper.MuiAvatar-root {
+        width: 35px;
+        height: 35px;
+    }
+
+    .icon-avatar.MuiSvgIcon-root {
+        width: 25px;
+        height: 25px;
+    }
+}

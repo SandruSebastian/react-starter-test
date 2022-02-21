@@ -1,0 +1,19 @@
+{
+    "title": "iOS device found!",
+    "paragraph1": "In order for leute.one to work properly, you need to",
+    "paragraph1Bold": " add this web app to your Home Screen.",
+    "paragraph2": "Here is how it works:",
+    "step1": "Step 1",
+    "step1DescriptionPart1": "tap on this (",
+    "step1DescriptionPart2-iPhone": ") icon at the bottom of your browser. (see below)",
+    "step1DescriptionPart2-iPad": ") icon at the top of your browser. (see below)",
+    "step2": "Step 2",
+    "step2DescriptionPart1": "choose „",
+    "step2DescriptionPart2": "“, then confirm with „",
+    "step2DescriptionPart3": "“. (see below)",
+    "step3": "Step 3",
+    "step3Description": "You can now acces leute.one from your homescreen.",
+    "addToHomeScreen": "Add to Home Screen",
+    "add": "Add",
+    "continue": "Continue without A2HS"
+}

@@ -1,0 +1,19 @@
+{
+    "title": "iOS Gerät gefunden!",
+    "paragraph1": "Damit leute.one richtig funktioniert, müssen Sie",
+    "paragraph1Bold": " diese Web-App zu Ihrem Home-Bildschirm hinzufügen.",
+    "paragraph2": "So funktioniert es:",
+    "step1": "Schritt 1",
+    "step1DescriptionPart1": "Tippen Sie auf dieses (",
+    "step1DescriptionPart2-iPhone": ") Symbol am unteren Rand Ihres Browsers. (siehe unten)",
+    "step1DescriptionPart2-iPad": ") Symbol am oberen Rand ihres Browsers. (siehe unten)",
+    "step2": "Schritt 2",
+    "step2DescriptionPart1": "wählen Sie „",
+    "step2DescriptionPart2": "“, dann bestätigen Sie mit „",
+    "step2DescriptionPart3": "“. (siehe unten)",
+    "step3": "Schritt 3",
+    "step3Description": "Sie können jetzt leute.one von Ihrem Home-Bildschirm ausführen.",
+    "addToHomeScreen": "Zum Home-Bildschirm",
+    "add": "Hinzufügen",
+    "continue": "Weiter ohne A2HS"
+}

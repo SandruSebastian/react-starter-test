@@ -1,0 +1,42 @@
+name: Test build
+
+on:
+    pull_request:
+        branches: [master]
+
+jobs:
+    tests:
+        runs-on: ubuntu-20.04
+        steps:
+            # Setup env
+            - uses: actions/checkout@v2
+            - uses: webfactory/ssh-agent@v0.4.1
+              with:
+                  ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+            - name: Setup Node
+              uses: actions/setup-node@v1
+              with:
+                  node-version: 16.x
+
+            - name: See npm version
+              run: npm -v
+
+            - name: Cache Node Modules
+              id: cache-node-modules
+              uses: actions/cache@v2
+              with:
+                  path: node_modules
+                  key: node-modules-${{ hashFiles('package-lock.json') }}
+
+            - name: Install if cache-miss
+              env:
+                  GITHUB_ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN_FOR_PACKAGE_REGISTRY }}
+              if: steps.cache-node-modules.outputs.cache-hit != 'true'
+              run: npm install
+
+            - name: Build
+              run: npm run build
+              env:
+                  # We first need to fix all warnings before we can enable it
+                  CI: false

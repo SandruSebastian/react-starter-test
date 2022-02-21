@@ -1,0 +1,10 @@
+.leute-app-container {
+    max-height: calc(100vh - 50px);
+    overflow: auto;
+}
+
+.container6 {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center }

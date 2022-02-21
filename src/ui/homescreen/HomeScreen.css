@@ -1,0 +1,44 @@
+.add-to-home-screen-container .page-container {
+    padding: 15px;
+    margin: 15px 15px 0;
+    border-radius: 5px;
+}
+
+.add-to-home-screen-header,
+.sth-steps-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.left-step-wrapper {
+    margin-right: 10px;
+}
+
+.italic-text {
+    margin-top: 15px;
+    font-style: italic;
+}
+
+.bold-text {
+    font-weight: 600;
+}
+
+.homescreen-icon {
+    width: 25px;
+    height: 23px;
+    vertical-align: text-top;
+    bottom: 1px;
+    position: relative;
+}
+
+.step3-title {
+    margin-top: 20px;
+}
+
+.sth-image-ipad {
+    margin: 10px;
+}
+
+.margin-top {
+    margin-top: 15px;
+}
