@@ -7,7 +7,7 @@ import React from 'react';
  * @param one - The one instance model
  * @returns the current authentication state
  */
-function useAuthenticationState(one: Authenticator): AuthState | undefined {
+export function useAuthenticationState(one: Authenticator): AuthState | undefined {
   const [authenticationState, setAuthenticationState] = React.useState<AuthState>();
 
   React.useEffect(() => {

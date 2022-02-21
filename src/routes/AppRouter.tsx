@@ -54,7 +54,25 @@ export default function AppRouter(props: {one: Authenticator}): React.ReactEleme
      * Renders the footer
      */
   function renderFooter() {
-    return null;
+    return (
+      <div className="footer">
+        © 2022
+        {' '}
+        {' '}
+        <a
+          style={{
+            cursor: 'pointer',
+            textDecoration: 'underline',
+            color: 'grey',
+          }}
+          target="_blank"
+          href="https://refinio.net/"
+          rel="noreferrer"
+        >
+          Refinio
+        </a>
+      </div>
+    );
   }
 
   return (
